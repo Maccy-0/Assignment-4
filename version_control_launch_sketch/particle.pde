@@ -15,8 +15,11 @@ class Particle {
     position.add(velocity);
   }
   
-  void display(){
+  void display(int i){
     fill(random(0,255),random(0,255),random(0,255));
     ellipse(position.x, position.y, 10, 10);
+    if (position.y>400){
+      particles.remove(i);
+    }
   }
 }
